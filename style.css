@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,600;1,400&display=swap');
+
+:root{
+--main-color: #121212;
+--black-color: #121212;
+--border: 0.1rem solid rgba(255,255,255,0.4)
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2 ease;
+}
+
+/* html bagli bir nece kod */
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    }  
+
+html::-webkit-scrollbar{
+    width: 1rem;
+    background-color: #121212;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: #916641;
+}
+
+ body{
+    background-color: var(--main-color);
+    }   
+section{
+    padding: 3.5rem 7%;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: black;
+    background-color: #916641;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+
+.heading{
+    color: #e3b48a75;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.3rem solid #e3b48a75;
+}
+.heading span{
+    text-transform: uppercase;
+    color: #e3b48a75;
+}
+
+.search-input{
+    font-size: 1.6rem;
+    color: #121212;
+    border-radius: 3rem;
+    text-transform: none;
+    padding: 1rem;
+}
+/* header start */
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 25px 2px(0 0 0 / 75%);
+    transform: scaleY(0);
+}
+.header .search-form.active{
+    transform: scaleY(1);
+}
+.header .search-form i{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin: 1.5rem;
+    color: #121212;
+}
+.header .search-form  input{
+    width: 100%;
+}
+.header .logo img {
+    height: 8rem;
+}
+
+.header{
+    background-color: #e3b48a75;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+}
+
+.header .navbar .active,
+.header .navbar a:hover{
+    border-color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.header .buttons button{
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+}
+/* 
+.header .cart-item-container{
+position: absolute;
+top: 95%;
+height: calc(100vh - 9rem);
+width: 35rem;
+background-color: #fff;
+box-shadow: 0px 20px 14px 0px (0 0 0 / 75%);
+}
+.header .cart-item-container .cart-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+.header .cart-item-container .cart-item img{
+    height: 2rem;
+    width: 2rem;
+} */
+
+
+.header #menu-btn{
+    display: none;
+}
+
+/* header end */
+
+/*home section start*/
+.home{
+    min-height: 100vh;
+    background: url(image/cover.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -12.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content{
+max-width: 60rem;
+}
+.home .content h3{
+    font-size: 5.5rem;
+    color: #caa07cda;
+}
+.home .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+    color: #caa07cda;
+    text-transform: none;
+}
+
+/*home section end*/
+
+/*whiskey section start*/
+.whiskey .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.whiskey .box-container .box{
+    padding: 3rem;
+    background-color: #fff;
+    display: flex;
+    min-height: 55rem;
+    border-radius: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.whiskey .box-container .box img{
+    width: 100%;
+    height: 55rem;
+    object-fit: cover;
+}
+
+.whiskey .box-container .box .category{
+    font-size: 1.3rem;
+}
+
+.whiskey .box-container .box h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.whiskey .box-container .box .price{
+        font-size: 2.5rem;
+        padding: 0.5rem 0;
+}
+.whiskey .box-container .box .price span{
+           text-decoration: line-through;
+           font-size: 1.6rem;
+           font-weight: 350;
+}
+/*whiskey section end*/
+
+/*wine section start*/
+.wine .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.wine .box-container .box{
+    padding: 3rem;
+    background-color: #fff;
+    display: flex;
+    min-height: 55rem;
+    border-radius: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.wine .box-container .box img{
+    width: 100%;
+    height: 55rem;
+    object-fit: cover;
+}
+
+.wine .box-container .box .category{
+    font-size: 1.3rem;
+}
+
+.wine .box-container .box h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.wine .box-container .box .price{
+        font-size: 2.5rem;
+        padding: 0.5rem 0;
+}
+.wine .box-container .box .price span{
+           text-decoration: line-through;
+           font-size: 1.6rem;
+           font-weight: 350;
+}
+/*wine section end*/
+
+/*about section start*/
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+    }
+.about .row img{
+    width: 30rem;
+    height: 35rem;
+}
+
+.about .row .content{
+    color: #fff;
+    flex: 1 1 80rem;
+}
+
+.about .row .content h3{
+    font-size: 3.5rem;
+}
+.about .row .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 3rem;
+}
+/*about section end*/
+
+/*review section start*/
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.review .box-container .box{
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    height: 50rem;
+    width: 37rem;
+}
+.review .box-container .box img{
+    width: 10rem;
+    height: 10rem;
+}
+.review .box-container .box p{
+    font-size: 2rem;
+    line-height: 1.8;
+    padding: 2rem 0;
+}
+.review .box-container .box .user{
+    height: 7rem;
+    width: 7rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.review .box-container .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #916641;
+}
+.review .box-container .box .stars i{
+    font-size: 1.5rem;
+    color: gold;
+}
+/*review section end*/
+
+/*contact section start*/
+.contact .row{
+    display: flex;
+    background-color: #97694182;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+.contact .row form{
+    padding: 5rem 2rem;
+    flex: 1 1 45rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.contact .row form .input-box{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: var(--border);
+}
+.contact .row form .input-box i{
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.contact .row form .input-box input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: transparent;
+    text-transform: none;
+}
+/*contact section end*/
+
+/*blog section start*/
+.blog .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.blog .box-container .box{
+    background-color: #fff;
+    border-radius: 2.5rem;
+}
+.blog .box-container .box .image{
+    height: 35rem;
+    overflow: hidden;
+    width: 100%;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    }
+.blog .box-container .box .image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+.blog .box-container .box:hover .image img{
+        transform: scale(1.2);
+    }
+.blog .box-container .box .content{
+    padding: 3rem;
+}
+.blog .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-transform: none;
+}
+.blog .box-container .box .content span{
+    display: block;
+    padding-top:1rem;
+    font-size: 2rem;
+}
+
+.blog .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #916641;
+    padding: 1rem 0;
+}
+
+/*blog section end*/
+
+/*footer section start*/
+.footer{
+    text-align: center;
+    background-color:#9166418e ;
+}
+.footer .search{
+    display: flex;
+    justify-content: center;
+}
+.footer .search .search-input{
+    width: 30rem;
+    }
+.footer .search .btn{
+    padding: 1rem 2;
+    margin-left: 1rem;
+}
+.footer .share{
+    padding: 2rem 0;
+}
+.footer .share a{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: #fff;
+    font-size: 3rem;
+    border: var(--border);
+    border-radius: 50%;
+    margin: 0.3rem;
+}
+.footer .share a:hover{
+    background-color: #916641;
+}
+.footer .created{
+    font-size: 3rem;
+    text-transform: none;
+    padding-top: 1.5rem;
+    font-weight: 300;
+}
+.footer .created span{
+    font-weight: bold
+}
+/*footer section end*/
+
+
+/*responsive start*/
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+ }
+ .header{
+    padding: 1.5rem 2;
+ }
+ .header .logo img{
+    height: 7rem
+ }
+ section{
+    padding: 2rem
+ }
+}
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+  .header .navbar{
+    position: absolute;
+    top: 95%;
+    background-color: #fff;
+    height: calc(100vh - 9rem);
+    width: 30rem;
+    box-shadow: 0 20px 14px 0 rgba(0,0,0 / 75% alpha);
+    right: -100%;
+  }  
+  .header .navbar.active{
+    right: 3rem;
+  }
+  .header .navbar a{
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+/*responsive end*/
+
+
+
+
+
+
+
+
+
